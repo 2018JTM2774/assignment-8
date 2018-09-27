@@ -34,12 +34,16 @@ enc_list = list(enc)
 #checking constraints on encrypted msg k1,k2 and k3
 if len(enc) < 1 and len(enc) > 150:
     print ("invalid length")
+    exit()
 elif k1 < 1 and k1 >150:
     print ("invalid range")
+    exit()
 elif k2 < 1 and k2 >150:
     print ("invalid range")
+    exit()
 elif k3 < 1 and k3 >150:
     print ("invalid range")
+    exit()
 #compare group1 in string and copy similar char into comp1
 for i in range(0,len(enc)):
     if enc_list[i] in group1:
@@ -78,6 +82,4 @@ for i in range(0,len(enc)+1):
         c+=1
 
 #print decrypted msg
-print(*enc_list,"")
-
-
+print(''.join(enc_list))
