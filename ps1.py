@@ -10,8 +10,15 @@ if n < 2 and n > 105:
 elif m < 2 and m > 105:
     print ("invalid range")
 else:
-    list = []
-    for i in range(n):
-        s = list(input())
-        list += (s)
-    print (list)
+    lst = []
+    for i in range (0,m):
+        lst.append([])
+    for i in range (0,n):
+        for j in range (0,m):
+            lst[i].append(i+j)
+            lst[i][j] = 0
+    for i in range (0,n):
+        for j in range (0,m):
+            print ('entry in row: ',j+1, 'column: ',i+1)
+            lst[i][j] = input()
+    print (lst)
