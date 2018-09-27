@@ -1,4 +1,4 @@
-"""python program for encryption of message
+"""python program for decryption of message
 by Shivam Gupta
 Sept 27 2018"""
 #rotate function
@@ -15,7 +15,7 @@ def rotate(m,n):
 group1="abcdefghi"
 group2="jklmnopqr"
 group3="stuvwxyz_"
-
+#declaring lists and indexes
 comp1 =[]
 comp2 =[]
 comp3 =[]
@@ -77,9 +77,7 @@ for i in range(0,len(enc)+1):
         enc_list[i]=comp3[c]
         c+=1
 
-#print(enc_list)
+#print decrypted msg
+print(*enc_list,"")
 
-for i in enc_list[:]:
-    print (i, end ='')
 
-print(" ")
